@@ -1,0 +1,17 @@
+.search-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  .search-input {
+    width: 20%;
+    text-align: center; /* Center the text horizontally */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* Add more styles as needed */
+  

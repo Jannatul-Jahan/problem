@@ -1,0 +1,37 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+.product {
+    border: 1px solid #ddd;
+    padding: 16px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease; 
+  }
+
+  .product:hover {
+    transform: scale(1.05); 
+    cursor: pointer;
+}
+  
+  .product h5 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .product p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .product-list-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+  }
