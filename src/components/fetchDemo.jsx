@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import useProductHook from "../hooks/useProductHook";
-import handleDeleteProduct from "../hooks/useProductHook";
 // import getUserRoleFromToken from "../utils/jwttoken";
 import { useNavigate, Link, useParams } from "react-router-dom";
 import "./FetchDemo.css";

@@ -61,10 +61,16 @@ const useCartDetails = () => {
     };
   
     axiosInstance
-      .patch("cart/remove", cartData)
+      .patch("cart/remove", cartData,{
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      })
       .then((resp) => {
         console.log(`Successfully deleted one product with ID ${productId} from cart`);
         setFetchReload(true);
+        window.location.reload();
       })
       .catch((err) => {
         console.error(`Error deleting product with ID ${productId}`, err);

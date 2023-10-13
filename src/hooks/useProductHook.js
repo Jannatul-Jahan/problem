@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useState, useEffect, useContext } from "react";
 import axiosInstance from "../utils/axiosinstance";
 import { ProductContext } from "../pages/products.page";
