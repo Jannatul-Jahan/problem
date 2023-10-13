@@ -45,7 +45,7 @@ const Design = () => {
     console.log("Fetch API called");
     const timeOutFunc = setTimeout(() => {
       callProductApi();
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timeOutFunc);
      }, [ page, limit, sortField, sortOrder, searchText]);

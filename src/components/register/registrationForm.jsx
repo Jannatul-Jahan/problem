@@ -179,9 +179,15 @@ const RegistrationForm = () => {
           <Controller
             name="role"
             control={control}
-            // rules={{
-            //   required: "Role is required",
-            // }}
+            rules={{
+              required: "Role is required",
+              validate: (value) => {
+                if (!/^\d+$/.test(value)) {
+                  return "Role must be an integer";
+                }
+                return true;
+              }
+            }}
             render={({ field }) => (
               <input
                 placeholder="Enter role"
