@@ -30,7 +30,7 @@ const RegistrationForm = () => {
   
   const handlerOnSubmit = (formData) => {
     registerUser(formData);
-    // navigate("/login");
+    navigate("/login");
   };
 
   const diffToast = () =>{
