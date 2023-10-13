@@ -59,7 +59,7 @@ const Design = () => {
 
   return (
     <div>
-      <h1 className="product-list-title">Product List</h1>
+      <h1 className="product-list-title">Book List</h1>
 
       <Search searchText={searchText} onSearchChange={handleSearchChange} />
       <br></br>

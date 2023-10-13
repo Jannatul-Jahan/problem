@@ -12,6 +12,9 @@ const FetchDemo = () => {
 
 
  return (
+   <> 
+    <h1 className="h1">All user data</h1>
+    <br></br>
     <div className="product-container">
       {loading === true && <h1>Loading...</h1>}
       {productData.map((product) => {
@@ -31,6 +34,7 @@ const FetchDemo = () => {
         );
       })}
     </div>
+    </>
   );
 };
 

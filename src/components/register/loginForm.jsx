@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm, Controller } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import useLogin from '../../hooks/useLogin';
 import "./registrationForm.css";
 
@@ -28,8 +30,13 @@ const LoginForm = () => {
     navigate("/");
   };
 
+  const diffToast = () =>{
+    toast("Login Successfull!");
+  }
+
 
   return (
+    <>
     <div>
       <h1 style={{textAlign: 'center'}}>Login Form</h1>
       <form onSubmit={handleSubmit(handlerOnSubmit)} className="form-container">
@@ -68,9 +75,11 @@ const LoginForm = () => {
         </div>
 
         <br></br>
-        <button type="submit" className="submit-button">Submit</button>
+        <button type="submit" className="submit-button" onClick={diffToast}>Submit</button>
       </form>
     </div>
+    <ToastContainer/>
+    </>
   );
 };
 

@@ -7,6 +7,7 @@ const Transactiondemo = () => {
 
  return (
     <div>
+      <h1 className="h1">All Transactions of all user</h1>
       {loading === true && <h1>Loading...</h1>}
       {productData.map((product) => {
         return (

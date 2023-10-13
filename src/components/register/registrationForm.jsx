@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm, Controller } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; 
 import useRegistration from '../../hooks/useRegistration';
 import "./registrationForm.css";
 
@@ -25,13 +27,18 @@ const RegistrationForm = () => {
   });
     
   const { registrationData, error, registerUser } = useRegistration(); 
-
+  
   const handlerOnSubmit = (formData) => {
     registerUser(formData);
-    navigate("/login");
+    // navigate("/login");
   };
 
+  const diffToast = () =>{
+    toast("Registration Successfull!");
+  }
+
   return (
+    <>
     <div>
       <h1 style={{textAlign: 'center'}}>Registration Form</h1>
       <form onSubmit={handleSubmit(handlerOnSubmit)} className="form-container">
@@ -48,7 +55,7 @@ const RegistrationForm = () => {
               },
               maxLength: {
                 value: 20,
-                message: "Minimum length must be 20",
+                message: "Maximum length must be 20",
               },
             }}
             render={({ field }) => (
@@ -86,14 +93,14 @@ const RegistrationForm = () => {
             name="password"
             control={control}
             rules={{
-              required: "Password is required",
+              required: "password is required",
               minLength: {
                 value: 6,
                 message: "Minimum length must be 6",
               },
               maxLength: {
                 value: 20,
-                message: "Max length must be 20",
+                message: "Maximum length must be 20",
               },
             }}
             render={({ field }) => (
@@ -152,8 +159,8 @@ const RegistrationForm = () => {
                 message: "Minimum length must be 4",
               },
               maxLength: {
-                value: 20,
-                message: "Max length must be 20",
+                value: 30,
+                message: "Max length must be 30",
               },
             }}
             render={({ field }) => (
@@ -172,9 +179,9 @@ const RegistrationForm = () => {
           <Controller
             name="role"
             control={control}
-            rules={{
-              required: "Role is required",
-            }}
+            // rules={{
+            //   required: "Role is required",
+            // }}
             render={({ field }) => (
               <input
                 placeholder="Enter role"
@@ -188,9 +195,11 @@ const RegistrationForm = () => {
         </div>
 
         <br></br>
-        <button type="submit" className="submit-button">Submit</button>
+        <button type="submit" className="submit-button" onClick={diffToast}>Submit</button>
       </form>
     </div>
+    <ToastContainer/>
+    </>
   );
 };
 
