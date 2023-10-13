@@ -1,8 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import FetchDemo from "../components/fetchDemo";
 import PostDemo from "../components/postDemo";
-import DeleteDemo from "../components/deleteDemo";
-import UpdateDemo from "../components/updateDemo";
 import { Link } from "react-router-dom";
 import "./HomePage.scss";
 
