@@ -1,7 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import axiosInstance from "../utils/axiosinstance";
 import { ProductContext } from "../pages/balance/balance.page";
-import { useParams } from "react-router";
 
 const useBalanceHook = () => {
   const [productData, setProductData] = useState([]);

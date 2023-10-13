@@ -1,8 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import axiosInstance from "../utils/axiosinstance";
 
-import { useParams } from "react-router";
-
 const useCheckoutHook = () => {
   const [productData, setProductData] = useState([]);
   const [loading, setLoading] = useState(false);

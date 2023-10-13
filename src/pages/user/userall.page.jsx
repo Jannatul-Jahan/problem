@@ -8,8 +8,6 @@ export const ProductContext = createContext();
 function Products() {
   const [fetchReload, setFetchReload] = useState(false);
 
-  const userRole = localStorage.getItem('role');
-
   useEffect(() => {
     console.log("FetchReload: ", fetchReload);
   }, [fetchReload]);
