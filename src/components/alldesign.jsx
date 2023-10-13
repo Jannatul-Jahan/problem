@@ -19,29 +19,35 @@ const Design = () => {
 
   const { fetchReload } = useContext(ProductContext);
 
+  const callProductApi = () => {
+    axiosInstance
+    .get(`/books/all?page=${page}&limit=${limit}&sortField=${sortField}&sortOrder=${sortOrder}&searchText=${searchText}`)
+    .then((resp) => resp.data)
+    .then((data) => {
+      console.log("Data : ", data.data.data);
+      setProducts(data.data.data); 
+      setLoading(false);
+      if (fetchReload) {
+          fetchReload(true);
+        }
+
+      return data;
+    })
+    .catch((err) => {
+      console.error("Error:", err);
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+  };
+
   useEffect(() => {
     console.log("Fetch API called");
+    const timeOutFunc = setTimeout(() => {
+      callProductApi();
+    }, 3000);
 
-    setLoading(true);
-    axiosInstance
-      .get(`/books/all?page=${page}&limit=${limit}&sortField=${sortField}&sortOrder=${sortOrder}&searchText=${searchText}`)
-      .then((resp) => resp.data)
-      .then((data) => {
-        console.log("Data : ", data.data.data);
-        setProducts(data.data.data); 
-        setLoading(false);
-        if (fetchReload) {
-            fetchReload(true);
-          }
-
-        return data;
-      })
-      .catch((err) => {
-        console.error("Error:", err);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    return () => clearTimeout(timeOutFunc);
      }, [ page, limit, sortField, sortOrder, searchText]);
 
   const handlePageChange = (newPage) => {

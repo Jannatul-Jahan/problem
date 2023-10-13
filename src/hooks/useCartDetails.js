@@ -103,6 +103,7 @@ const useCartDetails = () => {
     .then((resp) => {
       console.log(`Successfully added product with ID ${productId} into cart`);
       setFetchReload(true);
+      window.location.reload();
     })
       .catch((err) => {
         console.error(`Error adding product with ID ${productId}`, err);
