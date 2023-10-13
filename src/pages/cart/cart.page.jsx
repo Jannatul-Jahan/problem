@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 import Cartfetch from "../../components/cart/cartfetch";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "../HomePage.css";
+import "../HomePage.scss";
 
 
 export const ProductContext = createContext();
@@ -46,7 +46,7 @@ function CartPage() {
         <Cartfetch />
       </ProductContext.Provider> 
       <br></br>
-      <div><button onClick={handleCheckout}>Back to buy</button></div>
+      <div><button onClick={handleCheckout} className="back-button">Back to buy</button></div>
     </div>;
 };
 

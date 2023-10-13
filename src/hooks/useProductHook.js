@@ -71,6 +71,7 @@ const useProductHook = () => {
       .then((resp) => {
         console.log(`Successfully deleted product with ID ${productId}`);
         setFetchReload(true);
+        window.location.reload();
       })
       .catch((err) => {
         console.error(`Error deleting product with ID ${productId}:`, err);

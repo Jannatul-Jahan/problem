@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import Transactiondemo from "../components/transaction/transactionallDemo";
 import { Link } from "react-router-dom";
-import "./HomePage.css";
+import "./HomePage.scss";
 
 export const ProductContext = createContext();
 

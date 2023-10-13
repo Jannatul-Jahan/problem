@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "../HomePage.css";
+import "../HomePage.scss";
 
 const LoginPage = () => {
     const navigate = useNavigate();
@@ -22,7 +22,7 @@ const LoginPage = () => {
         </div>
         <div className="navbar">
           <Link to="/">Home</Link>
-          <Link to="/login" className="active">
+          <Link to="/login">
             Login
           </Link>
           <Link to="/products">Products</Link>
@@ -37,9 +37,10 @@ const LoginPage = () => {
           </Link>
         </div>
       </div>
-      <button onClick={handleLogout}>
-        Logout
-      </button>
+      <div className="book-container"><h1>Are you sure?</h1>
+      <button onClick={handleLogout} className="submit-button">
+        Yes
+      </button></div>
     </div>
   );
 };

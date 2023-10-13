@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./HomePage.css";
+import "./HomePage.scss";
 import Design from "../components/alldesign";
 
 export const ProductContext = createContext();

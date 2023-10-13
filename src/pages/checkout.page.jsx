@@ -2,7 +2,7 @@ import React from "react";
 import { createContext, useEffect, useState } from "react";
 import Checkoutfetch from "../components/transaction/checkoutfetch";
 import { Link } from "react-router-dom";
-import "./HomePage.css";
+import "./HomePage.scss";
 
 
 export const ProductContext = createContext();

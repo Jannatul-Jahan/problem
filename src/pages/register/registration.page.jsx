@@ -1,7 +1,7 @@
 import React from "react";
 import RegistrationForm from "../../components/register/registrationForm";
 import { Link } from "react-router-dom";
-import "../HomePage.css";
+import "../HomePage.scss";
 
 const RegistrationPage = () => {
   return <div>

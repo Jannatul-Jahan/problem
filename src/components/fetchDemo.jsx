@@ -23,14 +23,16 @@ const FetchDemo = () => {
             {/* <p>Description: {product.description}</p> */}
             <p>Price: {product.price}</p>
             
-            <button onClick={() => navigate(`/products/${product._id}`)}>
+            <button onClick={() => navigate(`/products/${product._id}`)} className="button">
                 details
               </button>
+              <br></br>
 
               {userRole === '1' && (
               <div>
-                <button onClick={() => handleDeleteProduct(product._id)}>Delete</button>
-                <button onClick={() => navigate(`/products/update/${product._id}`)}>
+                <button onClick={() => handleDeleteProduct(product._id)} className="button">Delete</button>
+                <br></br>
+                <button onClick={() => navigate(`/products/update/${product._id}`)} className="button">
                   Update
                 </button>
               </div>
@@ -38,7 +40,7 @@ const FetchDemo = () => {
               <br></br>
               {userRole === '2' && (
               <div>
-                <button onClick={() => AddtoCart(product._id, user)}>
+                <button onClick={() => AddtoCart(product._id, user)} className="button">
                 Add to cart
               </button> 
               </div>

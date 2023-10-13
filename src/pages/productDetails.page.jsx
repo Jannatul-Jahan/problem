@@ -4,7 +4,7 @@ import PostDemo from "../components/postDemo";
 import DeleteDemo from "../components/deleteDemo";
 import UpdateDemo from "../components/updateDemo";
 import { Link } from "react-router-dom";
-import "./HomePage.css";
+import "./HomePage.scss";
 
 export const ProductContext = createContext();
 
